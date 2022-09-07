@@ -1,3 +1,5 @@
+import { notes } from "./script.js"
+
 function createBtns(){
     const greenBtn = document.createElement('button');
     const redBtn = document.createElement('button');
@@ -24,15 +26,19 @@ function btnPressHandler(greenBtn, redBtn, yellowBtn, blueBtn){
     
         if(keyPressed == 1){
             greenBtn.setAttribute('class', 'btnPressed')
+            checkNoteHit(keyPressed)
         }
         else if(keyPressed == 2){
             redBtn.setAttribute('class', 'btnPressed')
+            checkNoteHit(keyPressed)
         }
         else if(keyPressed == 3){
             yellowBtn.setAttribute('class', 'btnPressed')
+            checkNoteHit(keyPressed)
         }
         else if(keyPressed == 4){
             blueBtn.setAttribute('class', 'btnPressed')
+            checkNoteHit(keyPressed)
         }
         else {
             return;
@@ -59,5 +65,19 @@ function btnPressHandler(greenBtn, redBtn, yellowBtn, blueBtn){
         }
     }))
 }
+
+function checkNoteHit(keyPressed){
+
+    let lastNote = notes[notes.length -1]
+
+    if (lastNote > 800 && lastNote < 600){
+        console.log('hit');
+    }
+    else{
+        console.log('miss');
+    }
+
+}
+
 
 createBtns();

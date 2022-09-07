@@ -1,4 +1,5 @@
 const canvas = document.getElementById("canvas");
+const gameWindow = document.getElementById(("gameWindow"))
 const ctx = canvas.getContext("2d");
 
 const canvasWidth = canvas.width = 525;
@@ -6,31 +7,6 @@ const canvasHeight = canvas.height = 800;
 
 let notes = [];
 let noteIndex = 0;
-
-document.addEventListener("keydown", (event => {
-    let keyPressed = event.key;
-
-    if(keyPressed == 1){
-        console.log("button 1")
-    }
-    else if(keyPressed == 2){
-        console.log("button 2")
-    }
-    else if(keyPressed == 3){
-        console.log("button 3")
-    }
-    else if(keyPressed == 4){
-        console.log("button 4")
-    }
-    else {
-        return;
-    }
-}))
-
-document.addEventListener("keyup", (event => {
-    console.log('button up')
-}))
-
 
 class Note {
     constructor(id, note_x, note_y, color){
@@ -99,34 +75,13 @@ function createNewNote(){
 
 }
 
-const interval = setInterval(function() {
+const NoteSpawninterval = setInterval(function() {
     createNewNote();
   }, 500);
 
 
-function drawButtons(){
-
-    let lanePosition = 75;
-    let buttonColors = ['#228B22', '#ff0000', '#FFFF00', '#0000FF']
-
-    for (let i = 0; i < 4; i++){
-
-        ctx.beginPath();
-        ctx.arc(lanePosition, 725, 50, 0, 2 * Math.PI);
-        ctx.fillStyle = buttonColors[i];
-        ctx.fill();
-        ctx.stroke();
-        lanePosition = lanePosition + 125;
-    }
-}
-
-
-
-
 function update(){
     ctx.clearRect(0, 0, canvasWidth, canvasHeight)
-
-    drawButtons();
 
     for (let i = 0; i < notes.length; i++){
         notes[i].drawNote();
@@ -135,6 +90,5 @@ function update(){
 
     requestAnimationFrame(update)
 }
-
 
 update();

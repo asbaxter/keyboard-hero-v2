@@ -5,6 +5,7 @@ const canvasWidth = canvas.width = 600;
 const canvasHeight = canvas.height = 600;
 
 let notes = [];
+let noteIndex = 0;
 
 class Note {
     constructor(id, note_x, note_y){
@@ -20,15 +21,19 @@ class Note {
         this.moveNote();
     }
     moveNote(){
-
         this.note_y = this.note_y + 10;
-        console.log(this.note_y);
+
+        if (this.note_y > canvasHeight){
+        // removes note object from array
+            notes.shift();
+        }
     }
 }
 
 function createNewNote(){
 
-    const note = new Note(1, 75, 40);
+    const note = new Note(noteIndex, 75, 40);
+    noteIndex++;
     notes.push(note);
 
 }

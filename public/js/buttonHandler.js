@@ -3,7 +3,7 @@ import { playMissedNote } from "./music.js"
 
 let score = 0;
 const btns = document.getElementById("btns");
-const scoreText = document.getElementById("scoreText");
+const scoreText = document.getElementById("scoreTextGame");
 
 function createBtns(){
     const greenBtn = document.createElement('button');

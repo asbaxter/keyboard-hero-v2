@@ -2,56 +2,113 @@
     margin: 0;
 }
 body{
-    background-image: url("https://images2.alphacoders.com/701/70172.jpg");
-    color: white;
+    background-image: url("../assets/images/dj-wallpaper.jpg");
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0c0ce14d,
+      0 0 82px #0c0ce14d,
+      0 0 92px #0c0ce14d,
+      0 0 102px #0c0ce14d,
+      0 0 151px #0c0ce14d;
 }
 h1{
     text-align: center;
-    color: white;
     font-size: 60px;
+    color: #fff;
+}
+h2{
+    font-size: 50px;
+    margin: 10px;
 }
 a{
     text-decoration: none;
-    border: black solid 1px;
-    border-radius: 25%;
-    padding: 10px;
-    background-color: blue;
+    font-size: x-large;
+    border-radius: 15%;
+    padding: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #0c0ce14d;
     color: white;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    
+    box-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0c0ce14d,
+      0 0 82px #0c0ce14d,
+      0 0 92px #0c0ce14d,
+      0 0 102px #0c0ce14d,
+      0 0 151px #0c0ce14d;
 }
+a:hover{
+    color: #FCEE4D;
+    box-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #FCEE4D,
+      0 0 82px #FCEE4D;
+}
+a:active{
+    border: 4px white solid;
+}
+
+/* --------------------- Menus ------------------------ */
 .menu{
     text-align: center;
-    border: solid black 1px;
     padding-left: 0;
     padding-right: 0;
     margin-left: auto;
     margin-right: auto;
-    display: block;
     width: 525px;
     height: 800px;
-    background: rgba(12, 12, 225, 0.3);
+    background: #0c0ce14d;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0c0ce14d,
+    0 0 82px #0c0ce14d,
+    0 0 92px #0c0ce14d,
+    0 0 102px #0c0ce14d,
+    0 0 151px #0c0ce14d;
 }
+.menuFeatures{
+    position: relative;
+    top:  40%;
+}
+
+
+/* --------------------- Game ------------------------ */
 #canvas{
     padding-left: 0;
     padding-right: 0;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    background: rgba(12, 12, 225, 0.3);
+    background: #0c0ce14d;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0c0ce14d,
+    0 0 82px #0c0ce14d,
+    0 0 92px #0c0ce14d,
+    0 0 102px #0c0ce14d,
+    0 0 151px #0c0ce14d;
     
 }
 
 #scoreText{
-    position: relative;
-    text-align: center;
     font-size: 30px;
-    color: white;
+    margin-bottom: 40px;
+}
+#scoreTextGame{
+    font-size: 30px;
+    text-align: center;
 }
 #btns{
     text-align: center;
@@ -64,24 +121,50 @@ button{
     outline: none;
     border: none;
     border-radius: 50%;
-    box-shadow: 0 9px #999;
     margin: 12px;
     font-size: xx-large;
+    color: white;
+    border: 7px white solid;
+    background-color: #0c0ce14d;
 }
 .btnPressed {
-    box-shadow: 0 5px #666;
     transform: translateY(4px);
+    border: 4px white solid;
 }
 
 #greenBtn{
-    background-color: green;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px green,
+    0 0 82px green,
+    0 0 92px green;
 }
 #redBtn{
-    background-color: red;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px red,
+    0 0 82px red,
+    0 0 92px red;
 }
 #yellowBtn{
-    background-color: yellow;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px yellow,
+    0 0 82px yellow,
+    0 0 92px yellow;
 }
 #blueBtn{
-    background-color: blue;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px blue,
+    0 0 82px blue,
+    0 0 92px blue;
 }

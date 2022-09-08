@@ -1,4 +1,3 @@
-import Note from "./Note.js";
 import { notes } from "./game.js"
 
 const gameWindow = document.getElementById(("gameWindow"))

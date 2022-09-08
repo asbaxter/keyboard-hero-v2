@@ -1,7 +1,6 @@
 import Note from "./Note.js";
 
 const canvas = document.getElementById("canvas");
-const gameWindow = document.getElementById(("gameWindow"))
 export const ctx = canvas.getContext("2d");
 
 const canvasWidth = canvas.width = 525;
@@ -9,7 +8,6 @@ export const canvasHeight = canvas.height = 800;
 
 export let notes = [];
 let noteIndex = 0;
-
 
 
 

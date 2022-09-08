@@ -1,4 +1,7 @@
-import { notes } from "./script.js"
+import Note from "./Note.js";
+import { notes } from "./game.js"
+
+const gameWindow = document.getElementById(("gameWindow"))
 
 function createBtns(){
     const greenBtn = document.createElement('button');
@@ -68,13 +71,26 @@ function btnPressHandler(greenBtn, redBtn, yellowBtn, blueBtn){
 
 function checkNoteHit(keyPressed){
 
-    let lastNote = notes[notes.length -1]
 
-    if (lastNote > 800 && lastNote < 600){
-        console.log('hit');
+    let lastNote_y = notes[0].note_y
+    let lastNote_color = notes[0].color
+
+    if (lastNote_y < 800 && lastNote_y > 675){
+        if (
+            lastNote_color == 'green' && keyPressed == 1 ||
+            lastNote_color == 'red' && keyPressed == 2 || 
+            lastNote_color == 'yellow' && keyPressed == 3 ||
+            lastNote_color == 'blue' && keyPressed == 4
+            )
+        {
+            console.log("hit")
+        } else {
+            console.log('wrong note')
+        }  
     }
     else{
-        console.log('miss');
+        console.log('miss the hitbox');
+        console.log(lastNote_y);
     }
 
 }

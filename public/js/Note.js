@@ -1,4 +1,4 @@
-import { ctx, canvasHeight, notes } from "./script.js"
+import { ctx, canvasHeight, notes } from "./game.js"
 
 class Note {
     constructor(id, note_x, note_y, color){
@@ -39,18 +39,6 @@ class Note {
         // removes note object from array
             notes.shift();
         }
-    }
-    checkNoteHit(keyPressed){
-
-        lastNote = notes[notes.length -1]
-    
-        if (lastNote > 800 && lastNote < 600){
-            console.log('hit');
-        }
-        else{
-            console.log('miss');
-        }
-    
     }
 }
 

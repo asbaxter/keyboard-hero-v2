@@ -38,7 +38,7 @@ function createNewNote(){
 
 const NoteSpawninterval = setInterval(function() {
     createNewNote();
-  }, 500);
+  }, 450);
 
 // main animation frame where game is executing
 function update(){
@@ -51,7 +51,9 @@ function update(){
     requestAnimationFrame(update)
 }
 
+
 createAudioTag();
+
 update();
 
 

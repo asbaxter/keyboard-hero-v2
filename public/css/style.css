@@ -1,8 +1,14 @@
 *{
     margin: 0;
 }
+body{
+    background-image: url("https://images2.alphacoders.com/701/70172.jpg");
+    color: white;
+}
 h1{
     text-align: center;
+    color: white;
+    font-size: 60px;
 }
 a{
     text-decoration: none;
@@ -29,20 +35,22 @@ a{
     display: block;
     width: 525px;
     height: 800px;
-    
+    background: rgba(12, 12, 225, 0.3);
 }
 #canvas{
-    border: 1px solid black;
     padding-left: 0;
     padding-right: 0;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    background: rgba(12, 12, 225, 0.3);
+    
 }
 
 #scoreText{
     position: relative;
     text-align: center;
+    color: white;
 }
 #btns{
     text-align: center;

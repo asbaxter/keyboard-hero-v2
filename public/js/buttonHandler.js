@@ -11,6 +11,11 @@ function createBtns(){
     const yellowBtn = document.createElement('button');
     const blueBtn = document.createElement('button');
 
+    greenBtn.textContent = '1';
+    redBtn.textContent = '2';
+    yellowBtn.textContent = '3';
+    blueBtn.textContent = '4';
+
     greenBtn.setAttribute('id', 'greenBtn');
     redBtn.setAttribute('id', 'redBtn');
     yellowBtn.setAttribute('id', 'yellowBtn');

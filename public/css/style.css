@@ -34,6 +34,7 @@ button{
     border-radius: 50%;
     box-shadow: 0 9px #999;
     margin: 12px;
+    font-size: xx-large;
 }
 .btnPressed {
     box-shadow: 0 5px #666;

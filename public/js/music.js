@@ -4,6 +4,9 @@ export function createAudioTag(){
     let source = "./assets/sound/penguinmusic-modern-chillout-12641.mp3"
 
     let song = document.createElement('audio');
+    song.onended = function(){
+        window.location.replace("./index.html");
+    }
     song.src = source;
     gameWindow.appendChild(song);
     song.play();

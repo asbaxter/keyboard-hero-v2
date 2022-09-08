@@ -50,6 +50,7 @@ a{
 #scoreText{
     position: relative;
     text-align: center;
+    font-size: 30px;
     color: white;
 }
 #btns{

@@ -5,7 +5,7 @@ export function createAudioTag(){
 
     let song = document.createElement('audio');
     song.onended = function(){
-        window.location.replace("./index.html");
+        window.location.replace("./score.html");
     }
     song.src = source;
     gameWindow.appendChild(song);

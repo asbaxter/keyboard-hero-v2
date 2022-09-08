@@ -108,7 +108,9 @@ function checkNoteHit(keyPressed){
 }
 
 function updateScore(){
+    localStorage.setItem("score", score);
     scoreText.textContent = 'Score: ' + score;
 }
+
 
 createBtns();

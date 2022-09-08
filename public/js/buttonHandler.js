@@ -1,6 +1,9 @@
 import { notes } from "./game.js"
+import { playMissedNote } from "./music.js"
 
-const gameWindow = document.getElementById(("gameWindow"))
+let score = 0;
+const btns = document.getElementById("btns");
+const scoreText = document.getElementById("scoreText");
 
 function createBtns(){
     const greenBtn = document.createElement('button');
@@ -13,10 +16,10 @@ function createBtns(){
     yellowBtn.setAttribute('id', 'yellowBtn');
     blueBtn.setAttribute('id', 'blueBtn');
 
-    gameWindow.appendChild(greenBtn);
-    gameWindow.appendChild(redBtn);
-    gameWindow.appendChild(yellowBtn);
-    gameWindow.appendChild(blueBtn);
+    btns.appendChild(greenBtn);
+    btns.appendChild(redBtn);
+    btns.appendChild(yellowBtn);
+    btns.appendChild(blueBtn);
 
     btnPressHandler(greenBtn, redBtn, yellowBtn, blueBtn);
 }
@@ -81,17 +84,26 @@ function checkNoteHit(keyPressed){
             lastNote_color == 'blue' && keyPressed == 4
             )
         {
-            console.log("hit")
-        } else {
-            console.log('wrong note')
+            score = score + 10;
+            console.log("hit " +lastNote_y);
+            updateScore()
+        } else {3
+            score = score - 20;
+            updateScore()
+            playMissedNote();
         }  
     }
     else{
-        console.log('miss the hitbox');
-        console.log(lastNote_y);
+        score = score - 20;
+        updateScore()
+        playMissedNote();
+        console.log("miss " +lastNote_y);
     }
 
 }
 
+function updateScore(){
+    scoreText.textContent = 'Score: ' + score;
+}
 
 createBtns();

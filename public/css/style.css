@@ -1,26 +1,39 @@
-#gameWindow{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+*{
+    margin: 0;
 }
-
+#gameWindow{
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+}
 
 #canvas{
     border: 1px solid black;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#scoreText{
+    position: relative;
+    text-align: center;
+}
+#btns{
+    text-align: center;
+    margin-top: -150px;
 }
 button{
     width: 100px;
     height: 100px;
-    padding: 15px 25px;
     cursor: pointer;
     outline: none;
     border: none;
     border-radius: 50%;
     box-shadow: 0 9px #999;
-    position: relative;
-    top: 300px;
-    right: 515px;
-    margin: 13px;
+    margin: 12px;
 }
 .btnPressed {
     box-shadow: 0 5px #666;

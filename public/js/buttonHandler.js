@@ -70,7 +70,6 @@ function btnPressHandler(greenBtn, redBtn, yellowBtn, blueBtn){
 
 function checkNoteHit(keyPressed){
 
-
     let lastNote_y = notes[0].note_y
     let lastNote_color = notes[0].color
 

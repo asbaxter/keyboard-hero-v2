@@ -1,4 +1,5 @@
 import Note from "./Note.js";
+import { createAudioTag } from "./music.js"
 
 const canvas = document.getElementById("canvas");
 export const ctx = canvas.getContext("2d");
@@ -8,7 +9,6 @@ export const canvasHeight = canvas.height = 800;
 
 export let notes = [];
 let noteIndex = 0;
-
 
 
 function createNewNote(){
@@ -40,7 +40,7 @@ const NoteSpawninterval = setInterval(function() {
     createNewNote();
   }, 500);
 
-
+// main animation frame where game is executing
 function update(){
     ctx.clearRect(0, 0, canvasWidth, canvasHeight)
 
@@ -52,4 +52,7 @@ function update(){
     requestAnimationFrame(update)
 }
 
+createAudioTag();
 update();
+
+

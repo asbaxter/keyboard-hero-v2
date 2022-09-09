@@ -11,6 +11,7 @@ const canvasWidth = canvas.width = 525;
 
 let noteIndex = 0;
 
+
 function createNewNote(){
     // tracks note ID (IDK if I even need this yet)
     noteIndex++;
@@ -35,6 +36,8 @@ function createNewNote(){
     }
 
 }
+
+
 
 const NoteSpawninterval = setInterval(function() {
     createNewNote();

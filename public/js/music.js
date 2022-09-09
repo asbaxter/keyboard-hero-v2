@@ -1,15 +1,16 @@
 export function createAudioTag(){
     const gameWindow = document.getElementById(("gameWindow"))
+    let song = localStorage.getItem("song");
+    
+    let source = song;
 
-    let source = "./assets/sound/insurrection.mp3"
-
-    let song = document.createElement('audio');
-    song.onended = function(){
+    let songEl = document.createElement('audio');
+    songEl.onended = function(){
         window.location.replace("./score.html");
     }
-    song.src = source;
-    gameWindow.appendChild(song);
-    song.play();
+    songEl.src = source;
+    gameWindow.appendChild(songEl);
+    songEl.play();
 }
 
 export function playMissedNote(){

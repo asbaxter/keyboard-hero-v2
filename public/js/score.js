@@ -5,6 +5,5 @@ function getScore(){
 
     scoreText.textContent = "Final Score: " + score;
 
-
 }
 getScore();

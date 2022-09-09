@@ -1,8 +1,9 @@
-import { ctx, canvasHeight, notes } from "./game.js"
+import { ctx, canvasHeight, notes } from "./game.js";
+import { updateScore} from "./buttonHandler.js";
 
 class Note {
-    constructor(id, note_x, note_y, color){
-        this.id = id;
+    constructor(hit, note_x, note_y, color){
+        this.hit = hit;
         this.note_x = note_x;
         this.note_y = note_y;
         this.color = color;
@@ -37,7 +38,21 @@ class Note {
 
         if (this.note_y > canvasHeight){
         // removes note object from array
+            this.testHit();
+        }
+    }
+    testHit(){
+        
+        if(this.hit == true){
+            console.log("hit");
             notes.shift();
+            return;
+        }
+        else{
+            let score = localStorage.getItem("score");
+            notes.shift();
+            score = score - 20;
+            updateScore(score);
         }
     }
 }

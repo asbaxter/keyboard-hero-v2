@@ -4,32 +4,11 @@ import { playMissedNote } from "./music.js"
 let score = 0;
 const btns = document.getElementById("btns");
 const scoreText = document.getElementById("scoreTextGame");
+const greenBtn = document.getElementById("greenBtn");
+const redBtn = document.getElementById("redBtn");
+const yellowBtn = document.getElementById("yellowBtn");
+const blueBtn = document.getElementById("blueBtn");
 
-function createBtns(){
-    const greenBtn = document.createElement('button');
-    const redBtn = document.createElement('button');
-    const yellowBtn = document.createElement('button');
-    const blueBtn = document.createElement('button');
-
-    greenBtn.textContent = '1';
-    redBtn.textContent = '2';
-    yellowBtn.textContent = '3';
-    blueBtn.textContent = '4';
-
-    greenBtn.setAttribute('id', 'greenBtn');
-    redBtn.setAttribute('id', 'redBtn');
-    yellowBtn.setAttribute('id', 'yellowBtn');
-    blueBtn.setAttribute('id', 'blueBtn');
-
-    btns.appendChild(greenBtn);
-    btns.appendChild(redBtn);
-    btns.appendChild(yellowBtn);
-    btns.appendChild(blueBtn);
-
-    btnPressHandler(greenBtn, redBtn, yellowBtn, blueBtn);
-}
-
-function btnPressHandler(greenBtn, redBtn, yellowBtn, blueBtn){
 
     document.addEventListener("keydown", (event => {
         let keyPressed = event.key;
@@ -53,7 +32,8 @@ function btnPressHandler(greenBtn, redBtn, yellowBtn, blueBtn){
         else {
             return;
         }
-    }))
+    }));
+
     
     document.addEventListener("keyup", (event => {
         let keyup = event.key;
@@ -73,13 +53,14 @@ function btnPressHandler(greenBtn, redBtn, yellowBtn, blueBtn){
         else {
             return;
         }
-    }))
-}
+    }));
+
 
 function checkNoteHit(keyPressed){
 
-    let lastNote_y = notes[0].note_y
-    let lastNote_color = notes[0].color
+    let lastNote_y = notes[0].note_y;
+    let lastNote_color = notes[0].color;
+    let lastNote_hit = notes[0].hit;
 
     if (lastNote_y < 800 && lastNote_y > 675){
         if (
@@ -90,27 +71,23 @@ function checkNoteHit(keyPressed){
             )
         {
             score = score + 10;
-            console.log("hit " +lastNote_y);
-            updateScore()
-        } else {3
+            lastNote_hit = true;
+            updateScore(score)
+        } else {
             score = score - 20;
-            updateScore()
+            updateScore(score);
             playMissedNote();
         }  
     }
     else{
         score = score - 20;
-        updateScore()
+        updateScore(score);
         playMissedNote();
-        console.log("miss " +lastNote_y);
     }
-
 }
 
-function updateScore(){
+export function updateScore(score){
     localStorage.setItem("score", score);
     scoreText.textContent = 'Score: ' + score;
 }
 
-
-createBtns();

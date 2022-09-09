@@ -55,7 +55,7 @@ function update(){
     }
 
     checkGameOver();
-    requestAnimationFrame(update)
+    requestAnimationFrame(update);
 }
 
 

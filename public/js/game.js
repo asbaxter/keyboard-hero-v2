@@ -1,5 +1,5 @@
 import Note from "./Note.js";
-import { createAudioTag } from "./music.js"
+import { createAudioTag, songBPMHandler } from "./music.js"
 
 const canvas = document.getElementById("canvas");
 
@@ -41,10 +41,15 @@ let score = localStorage.getItem("score");
     }
 }
 
-const NoteSpawninterval = setInterval(function() {
-    createNewNote();
-  }, 300);
+export function setSongBPM(BPM){
+
+    const NoteSpawninterval = setInterval(function() {
+        createNewNote();
+    }, BPM);
   
+}
+
+
 
 // main animation frame where game is executing
 function update(){
@@ -60,6 +65,7 @@ function update(){
 
 
 createAudioTag();
+songBPMHandler();
 update();
 
 

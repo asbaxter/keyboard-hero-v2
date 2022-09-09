@@ -13,19 +13,19 @@ class Note {
         ctx.arc(this.note_x, this.note_y, 45, 0, 2 * Math.PI);
 
         if (this.color == 'green'){
-            ctx.fillStyle = "rgba(0, 128, 0, 0.7)";
+            ctx.fillStyle = "rgba(0, 128, 0, 0.6)";
             ctx.fill();
         }
         else if (this.color == 'red'){
-            ctx.fillStyle = "rgba(255, 0, 0, 0.7)";
+            ctx.fillStyle = "rgba(255, 0, 0, 0.6)";
             ctx.fill();
         }
         else if (this.color == 'yellow'){
-            ctx.fillStyle = "rgba(255, 255, 0, 0.7)";
+            ctx.fillStyle = "rgba(255, 255, 0, 0.6)";
             ctx.fill();
         }
         else{
-            ctx.fillStyle = "rgba(0, 0, 255, 0.7)";
+            ctx.fillStyle = "rgba(0, 0, 255, 0.6)";
             ctx.fill();
 
         }

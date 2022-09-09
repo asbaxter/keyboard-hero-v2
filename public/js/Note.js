@@ -29,7 +29,7 @@ class Note {
             ctx.fill();
 
         }
-        ctx.shadowBlur = 50;
+        ctx.shadowBlur = 20;
         ctx.shadowColor = "white";
         ctx.stroke();
         this.moveNote();

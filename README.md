@@ -5,7 +5,7 @@
 ![alt text](./public/assets/images/menu-screenshot.png)
 
 ## Features Coming Soon:
-- add style & animations for notes
+- animations for note hits
 - note speed & spawn rate need to match the different song BPMs
 - more advanced note generation (read the audio and determine when to spawn note) 
 - more advanced scoring alogrithim (impliment combos)

@@ -148,12 +148,13 @@ button{
     margin: 12px;
     font-size: xx-large;
     color: white;
-    border: 7px white solid;
     background-color: #0c0ce14d;
+    border: 4px white solid;
 }
 .btnPressed {
     transform: translateY(4px);
-    border: 4px white solid;
+    border: 7px white solid;
+
 }
 
 #greenBtn{

@@ -90,6 +90,15 @@ a:active{
     margin-top: 100px;
     padding: 30px;
 }
+#playing{
+    color: #FCEE4D;
+    box-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #FCEE4D,
+      0 0 82px #FCEE4D;
+}
 
 
 

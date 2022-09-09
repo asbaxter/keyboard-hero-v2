@@ -2,7 +2,11 @@
     margin: 0;
 }
 body{
-    background-image: url("../assets/images/dj-wallpaper.jpg");
+    background: url("../assets/images/dj-wallpaper.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     font-family: 'Courier New', Courier, monospace;
     color: #fff;
     text-shadow:

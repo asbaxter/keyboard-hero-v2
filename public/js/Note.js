@@ -10,7 +10,7 @@ class Note {
     drawNote(){
 
         ctx.beginPath();
-        ctx.arc(this.note_x, this.note_y, 50, 0, 2 * Math.PI);
+        ctx.arc(this.note_x, this.note_y, 45, 0, 2 * Math.PI);
 
         if (this.color == 'green'){
             ctx.fillStyle = '#90EE90';

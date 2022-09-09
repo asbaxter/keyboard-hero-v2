@@ -2,7 +2,6 @@ import Note from "./Note.js";
 import { createAudioTag } from "./music.js"
 
 const canvas = document.getElementById("canvas");
-const gameWindow = document.getElementById("gameWindow");
 
 export const ctx = canvas.getContext("2d");
 export let notes = [];
@@ -16,7 +15,7 @@ function createNewNote(){
     let randNote = Math.floor(Math.random() * 4) + 1;
 
     if (randNote == 1){
-        const note = new Note(75, 40, 'green');
+        const note = new Note(65, 40, 'green');
         notes.push(note);
     }
     else if (randNote == 2){
@@ -28,10 +27,18 @@ function createNewNote(){
         notes.push(note);
     }
     else {
-        const note = new Note(450, 40, 'blue');
+        const note = new Note(460, 40, 'blue');
         notes.push(note);
     }
 
+}
+
+function checkGameOver(){
+let score = localStorage.getItem("score");
+
+    if (score < -200){
+        window.location.replace("./score.html");
+    }
 }
 
 const NoteSpawninterval = setInterval(function() {
@@ -47,12 +54,12 @@ function update(){
         notes[i].drawNote();
     }
 
+    checkGameOver();
     requestAnimationFrame(update)
 }
 
 
 createAudioTag();
-
 update();
 
 

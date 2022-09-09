@@ -8,11 +8,11 @@ let track = document.createElement('audio');
 
 let audioPath = 
 [
-    "./assets/sound/penguinmusic-modern-chillout-12641.mp3",
-    "./assets/sound/tuesday.mp3",
-    "./assets/sound/metamorphosis.mp3",
-    "./assets/sound/insurrection.mp3",
-    "./assets/sound/cyberpunk-2099.mp3"
+    "./public/assets/sound/penguinmusic-modern-chillout-12641.mp3",
+    "./public/assets/sound/tuesday.mp3",
+    "./public/assets/sound/metamorphosis.mp3",
+    "./public/assets/sound/insurrection.mp3",
+    "./public/assets/sound/cyberpunk-2099.mp3"
 ];
 
 document.addEventListener("click", (event => {

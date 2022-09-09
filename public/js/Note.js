@@ -2,8 +2,7 @@ import { ctx, canvasHeight, notes } from "./game.js";
 import { updateScore} from "./buttonHandler.js";
 
 class Note {
-    constructor(hit, note_x, note_y, color){
-        this.hit = hit;
+    constructor(note_x, note_y, color){
         this.note_x = note_x;
         this.note_y = note_y;
         this.color = color;
@@ -41,12 +40,10 @@ class Note {
             this.testHit();
         }
     }
-    testHit(){
+    testHit(hit){
         
-        if(this.hit == true){
-            console.log("hit");
+        if(hit == true){
             notes.shift();
-            return;
         }
         else{
             let score = localStorage.getItem("score");

@@ -9,25 +9,26 @@ export let notes = [];
 export const canvasHeight = canvas.height = 800;
 const canvasWidth = canvas.width = 525;
 
+localStorage.setItem("score", 0);
 
 function createNewNote(){
 
     let randNote = Math.floor(Math.random() * 4) + 1;
 
     if (randNote == 1){
-        const note = new Note(false, 75, 40, 'green');
+        const note = new Note(75, 40, 'green');
         notes.push(note);
     }
     else if (randNote == 2){
-        const note = new Note(false, 200, 40, 'red');
+        const note = new Note(200, 40, 'red');
         notes.push(note);
     }
     else if (randNote == 3){
-        const note = new Note(false, 325, 40, 'yellow');
+        const note = new Note(325, 40, 'yellow');
         notes.push(note);
     }
     else {
-        const note = new Note(false, 450, 40, 'blue');
+        const note = new Note(450, 40, 'blue');
         notes.push(note);
     }
 

@@ -1,8 +1,8 @@
+import Note from "./Note.js";
 import { notes } from "./game.js"
 import { playMissedNote } from "./music.js"
 
-let score = 0;
-const btns = document.getElementById("btns");
+export let score = 0;
 const scoreText = document.getElementById("scoreTextGame");
 const greenBtn = document.getElementById("greenBtn");
 const redBtn = document.getElementById("redBtn");
@@ -10,57 +10,56 @@ const yellowBtn = document.getElementById("yellowBtn");
 const blueBtn = document.getElementById("blueBtn");
 
 
-    document.addEventListener("keydown", (event => {
-        let keyPressed = event.key;
-    
-        if(keyPressed == 1){
-            greenBtn.setAttribute('class', 'btnPressed')
-            checkNoteHit(keyPressed)
-        }
-        else if(keyPressed == 2){
-            redBtn.setAttribute('class', 'btnPressed')
-            checkNoteHit(keyPressed)
-        }
-        else if(keyPressed == 3){
-            yellowBtn.setAttribute('class', 'btnPressed')
-            checkNoteHit(keyPressed)
-        }
-        else if(keyPressed == 4){
-            blueBtn.setAttribute('class', 'btnPressed')
-            checkNoteHit(keyPressed)
-        }
-        else {
-            return;
-        }
-    }));
+document.addEventListener("keydown", (event => {
+    let keyPressed = event.key;
 
+    if(keyPressed == 1){
+        greenBtn.setAttribute('class', 'btnPressed')
+        checkNoteHit(keyPressed)
+    }
+    else if(keyPressed == 2){
+        redBtn.setAttribute('class', 'btnPressed')
+        checkNoteHit(keyPressed)
+    }
+    else if(keyPressed == 3){
+        yellowBtn.setAttribute('class', 'btnPressed')
+        checkNoteHit(keyPressed)
+    }
+    else if(keyPressed == 4){
+        blueBtn.setAttribute('class', 'btnPressed')
+        checkNoteHit(keyPressed)
+    }
+    else {
+        return;
+    }
+}));
+
+
+document.addEventListener("keyup", (event => {
+    let keyup = event.key;
     
-    document.addEventListener("keyup", (event => {
-        let keyup = event.key;
-        
-        if(keyup == 1){
-            greenBtn.classList.remove("btnPressed");
-        }
-        else if(keyup == 2){
-            redBtn.classList.remove("btnPressed");
-        }
-        else if(keyup == 3){
-            yellowBtn.classList.remove("btnPressed");
-        }
-        else if(keyup == 4){
-            blueBtn.classList.remove("btnPressed");
-        }
-        else {
-            return;
-        }
-    }));
+    if(keyup == 1){
+        greenBtn.classList.remove("btnPressed");
+    }
+    else if(keyup == 2){
+        redBtn.classList.remove("btnPressed");
+    }
+    else if(keyup == 3){
+        yellowBtn.classList.remove("btnPressed");
+    }
+    else if(keyup == 4){
+        blueBtn.classList.remove("btnPressed");
+    }
+    else {
+        return;
+    }
+}));
 
 
 function checkNoteHit(keyPressed){
 
     let lastNote_y = notes[0].note_y;
     let lastNote_color = notes[0].color;
-    let lastNote_hit = notes[0].hit;
 
     if (lastNote_y < 800 && lastNote_y > 675){
         if (
@@ -71,7 +70,7 @@ function checkNoteHit(keyPressed){
             )
         {
             score = score + 10;
-            lastNote_hit = true;
+            notes[0].testHit(true);
             updateScore(score)
         } else {
             score = score - 20;

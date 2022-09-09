@@ -2,13 +2,11 @@ export function createAudioTag(){
     const gameWindow = document.getElementById(("gameWindow"))
     let song = localStorage.getItem("song");
 
-    let source = song;
-
     let songEl = document.createElement('audio');
     songEl.onended = function(){
         window.location.replace("./score.html");
     }
-    songEl.src = source;
+    songEl.src = song;
     gameWindow.appendChild(songEl);
     songEl.play();
 }

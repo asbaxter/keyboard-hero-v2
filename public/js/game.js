@@ -38,8 +38,8 @@ function createNewNote(){
 
 const NoteSpawninterval = setInterval(function() {
     createNewNote();
-  }, 450);
-
+  }, 300);
+  
 // main animation frame where game is executing
 function update(){
     ctx.clearRect(0, 0, canvasWidth, canvasHeight)

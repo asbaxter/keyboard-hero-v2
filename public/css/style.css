@@ -29,8 +29,6 @@ a{
     font-size: x-large;
     border-radius: 15%;
     padding: 15px;
-    padding-left: 100px;
-    padding-right: 100px;
     background-color: #0c0ce14d;
     color: white;
     box-shadow:
@@ -42,6 +40,10 @@ a{
       0 0 92px #0c0ce14d,
       0 0 102px #0c0ce14d,
       0 0 151px #0c0ce14d;
+      display: block;
+      margin-top: 30px;
+      margin-left: 125px;
+      margin-right: 125px;
 }
 a:hover{
     color: #FCEE4D;
@@ -80,6 +82,15 @@ a:active{
     position: relative;
     top:  40%;
 }
+.menuFeaturesMain{
+    position: relative;
+    top:  5%;
+}
+#playBtn{
+    margin-top: 100px;
+    padding: 30px;
+}
+
 
 
 /* --------------------- Game ------------------------ */

@@ -1,7 +1,7 @@
 export function createAudioTag(){
     const gameWindow = document.getElementById(("gameWindow"))
 
-    let source = "./assets/sound/penguinmusic-modern-chillout-12641.mp3"
+    let source = "./assets/sound/insurrection.mp3"
 
     let song = document.createElement('audio');
     song.onended = function(){

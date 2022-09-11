@@ -14,6 +14,7 @@
 
 
 ## Features Coming Soon:
+- mobile responsive and touch controls
 - animations for note hits
 - more advanced note generation (read the audio and determine when to spawn note) 
 - more advanced scoring alogrithim (impliment combos)

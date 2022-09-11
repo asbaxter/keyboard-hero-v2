@@ -58,9 +58,6 @@ a:hover{
       0 0 42px #FCEE4D,
       0 0 82px #FCEE4D;
 }
-a:active{
-    border: 4px white solid;
-}
 
 /* --------------------- Menus ------------------------ */
 .menu{

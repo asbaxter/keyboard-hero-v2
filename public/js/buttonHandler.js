@@ -55,6 +55,48 @@ document.addEventListener("keyup", (event => {
     }
 }));
 
+document.addEventListener("touchstart", (event => {
+    let noteTouched = event.target.innerHTML;
+    if(noteTouched == 1){
+        greenBtn.setAttribute('class', 'btnPressed')
+        checkNoteHit(noteTouched)
+    }
+    else if(noteTouched == 2){
+        redBtn.setAttribute('class', 'btnPressed')
+        checkNoteHit(noteTouched)
+    }
+    else if(noteTouched == 3){
+        yellowBtn.setAttribute('class', 'btnPressed')
+        checkNoteHit(noteTouched)
+    }
+    else if(noteTouched == 4){
+        blueBtn.setAttribute('class', 'btnPressed')
+        checkNoteHit(noteTouched)
+    }
+    else {
+        return;
+    }
+}));
+
+document.addEventListener("touchend", (event => {
+    let noteTouched = event.target.innerHTML;
+    if(noteTouched == 1){
+        greenBtn.classList.remove("btnPressed");
+    }
+    else if(noteTouched == 2){
+        redBtn.classList.remove("btnPressed");
+    }
+    else if(noteTouched == 3){
+        yellowBtn.classList.remove("btnPressed");
+    }
+    else if(noteTouched == 4){
+        blueBtn.classList.remove("btnPressed");
+    }
+    else {
+        return;
+    }
+}));
+
 
 function checkNoteHit(keyPressed){
 
